@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student CRUD Form</title>
+</head>
+<body>
+  <h1>Student CRUD Application</h1>
+    <form id="studentForm">
+        <label for="studentId">ID:</label>
+        <input type="text" id="studentId" placeholder="Student ID">
+
+        <label for="studentName">Name:</label>
+        <input type="text" id="studentName" placeholder="Student Name">
+
+        <label for="studentEmail">Email:</label>
+        <input type="email" id="studentEmail" placeholder="Student Email">
+
+        <button onclick="createStudent()">Create</button>
+    </form>
+
+    <!-- Modal -->
+    <button class="help" onclick="openModal()">💡</button>
+
+    <div id="myModal" class="overlay">
+      <div class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>Click on the information you want edit/update 😉</p>
+      </div>
+  </div>
+
+    <!-- Table -->
+    <table id="table">
+      <thead>
+          <tr>
+              <th>Student ID</th>
+              <th>Student Name</th>
+              <th>Student Email</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody id="table-body">
+          <!-- <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>john.doe@example.com</td>
+              <td><button onclick="deleteStudent(this)">Remove</button></td>
+          </tr> -->
+      </tbody>
+  </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
